@@ -36,7 +36,7 @@ const projects = [
     id: 5,
     name: "St Trinity Property Group",
     description: "Real Estate Development",
-    image: "/st-trinity-logo.png",
+    image: "/lovable-uploads/d5c87da5-02da-4b79-b047-164bf754233f.png",
     category: "Property"
   },
   {
