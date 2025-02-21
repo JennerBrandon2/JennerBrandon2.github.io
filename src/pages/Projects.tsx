@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -9,7 +8,8 @@ const projects = [
     name: "Bilue",
     description: "Digital Innovation Partner",
     image: "/lovable-uploads/bfbce4d2-a37c-421c-8e52-8ce770ad2171.png",
-    category: "Digital Transformation"
+    category: "Digital Transformation",
+    link: "/projects/bilue"
   },
   {
     id: 2,
@@ -113,26 +113,28 @@ const Projects = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-xl backdrop-blur-md bg-white/10 hover:bg-white/20 transition-colors"
               >
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
-                  <div className="space-y-2">
-                    <span className="text-gold-200 text-sm font-medium">
-                      {project.category}
-                    </span>
-                    <h3 className="text-2xl font-display font-bold text-white">
-                      {project.name}
-                    </h3>
-                    <p className="text-luxury-100">
-                      {project.description}
-                    </p>
+                <Link to={project.link || "#"} className="block">
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
                   </div>
-                </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
+                    <div className="space-y-2">
+                      <span className="text-gold-200 text-sm font-medium">
+                        {project.category}
+                      </span>
+                      <h3 className="text-2xl font-display font-bold text-white">
+                        {project.name}
+                      </h3>
+                      <p className="text-luxury-100">
+                        {project.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>
