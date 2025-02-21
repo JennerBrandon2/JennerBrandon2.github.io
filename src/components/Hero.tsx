@@ -1,5 +1,6 @@
 
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -66,10 +67,13 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in [animation-delay:600ms]">
-            <button className="bg-gold-200 hover:bg-gold-100 text-luxury-950 px-8 py-3 rounded-full font-medium inline-flex items-center transition-all">
+            <Link 
+              to="/projects" 
+              className="bg-gold-200 hover:bg-gold-100 text-luxury-950 px-8 py-3 rounded-full font-medium inline-flex items-center transition-all"
+            >
               View Projects
               <ChevronRight className="w-4 h-4 ml-2" />
-            </button>
+            </Link>
             <button className="border border-gold-200/30 hover:border-gold-200/50 px-8 py-3 rounded-full font-medium inline-flex items-center transition-all hover:bg-gold-200/10">
               About Me
             </button>
