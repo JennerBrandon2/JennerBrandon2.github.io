@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -33,7 +32,8 @@ const projects = [
     name: "Wedded Wonderland",
     description: "Wedding Planning Platform",
     image: "/lovable-uploads/9d0e04fb-5687-4d69-9697-d09de3f7be77.png",
-    category: "Marketplace"
+    category: "Marketplace",
+    link: "/projects/wedded-wonderland"
   },
   {
     id: 5,
