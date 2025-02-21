@@ -1,8 +1,9 @@
-
 import { ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-luxury-950 text-white">
       {/* Background pattern layer */}
@@ -67,13 +68,13 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in [animation-delay:600ms]">
-            <Link 
-              to="/projects" 
+            <button 
+              onClick={() => navigate('/projects')}
               className="bg-gold-200 hover:bg-gold-100 text-luxury-950 px-8 py-3 rounded-full font-medium inline-flex items-center transition-all"
             >
               View Projects
               <ChevronRight className="w-4 h-4 ml-2" />
-            </Link>
+            </button>
             <button className="border border-gold-200/30 hover:border-gold-200/50 px-8 py-3 rounded-full font-medium inline-flex items-center transition-all hover:bg-gold-200/10">
               About Me
             </button>
