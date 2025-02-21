@@ -1,15 +1,15 @@
 
 import { motion } from "framer-motion";
-import { ChevronLeft, Star, Trophy, Target, Check, Anchor, Globe, LineChart, FileText } from "lucide-react";
+import { ChevronLeft, Trophy, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const projectStats = {
   skills: [
-    { name: "Brand Strategy", rating: 5 },
-    { name: "Digital Marketing", rating: 5 },
-    { name: "Website Development", rating: 4.9 },
-    { name: "SEO Optimization", rating: 4.8 },
-    { name: "Content Strategy", rating: 5 }
+    "Brand Strategy",
+    "Digital Marketing",
+    "Website Development",
+    "SEO Optimization",
+    "Content Strategy"
   ],
   achievements: [
     "Organic traffic growth from 300 to 4,500+ monthly visitors",
@@ -76,24 +76,15 @@ const BilueProject = () => {
                   A comprehensive brand transformation and growth strategy project, repositioning Bilue as a market leader in mobile development and digital innovation.
                 </p>
 
-                {/* Skills Rating */}
-                <div className="space-y-4 mb-8">
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   {projectStats.skills.map((skill) => (
-                    <div key={skill.name} className="flex items-center justify-between gap-4">
-                      <span className="text-luxury-100 min-w-[180px]">{skill.name}</span>
-                      <div className="flex gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-5 h-5 ${
-                              i < Math.floor(skill.rating)
-                                ? "text-gold-500"
-                                : "text-luxury-700"
-                            }`}
-                            fill={i < Math.floor(skill.rating) ? "currentColor" : "none"}
-                          />
-                        ))}
-                      </div>
+                    <div 
+                      key={skill}
+                      className="flex items-center gap-3 bg-luxury-800/30 rounded-lg p-3 border border-white/5"
+                    >
+                      <div className="h-2 w-2 rounded-full bg-gold-500" />
+                      <span className="text-luxury-100">{skill}</span>
                     </div>
                   ))}
                 </div>
