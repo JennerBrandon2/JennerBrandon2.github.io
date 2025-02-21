@@ -1,51 +1,51 @@
 
 import { motion } from "framer-motion";
-import { ChevronLeft, Star, Trophy, Target, Check, BarChart3, Users } from "lucide-react";
+import { ChevronLeft, Star, Trophy, Target, Check, Anchor, Globe, LineChart, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const projectStats = {
   skills: [
-    { name: "Mobile Development", rating: 5 },
-    { name: "UI/UX Design", rating: 5 },
-    { name: "Enterprise Architecture", rating: 4.8 },
-    { name: "Cloud Solutions", rating: 4.9 },
-    { name: "Digital Transformation", rating: 5 }
+    { name: "Brand Strategy", rating: 5 },
+    { name: "Digital Marketing", rating: 5 },
+    { name: "Website Development", rating: 4.9 },
+    { name: "SEO Optimization", rating: 4.8 },
+    { name: "Content Strategy", rating: 5 }
   ],
   achievements: [
-    "Built Australia's leading health insurance app",
-    "Reduced operational costs by 32%",
-    "500,000+ Active Users",
-    "App Store Rating of 4.8",
-    "Successful Digital Transformation"
+    "Organic traffic growth from 300 to 4,500+ monthly visitors",
+    "50% reduction in website load time",
+    "40% increase in user engagement",
+    "35% boost in conversion rates",
+    "First-page rankings for competitive keywords"
   ],
   highlights: [
-    "Native iOS & Android Development",
-    "Cloud-First Architecture",
-    "Microservices Implementation",
-    "Automated CI/CD Pipeline",
-    "User-Centered Design Process",
-    "Real-time Data Integration"
+    "Complete Brand Transformation",
+    "Webflow Migration & Optimization",
+    "AWS & Apple Partnerships",
+    "Enterprise Case Studies",
+    "SEO Strategy Implementation",
+    "Internal Communications Revamp"
   ]
 };
 
 const outcomes = [{
-  metric: "98%",
-  label: "Client Satisfaction",
-  description: "Based on post-project surveys"
-}, {
-  metric: "24.6%",
-  label: "User Engagement",
-  description: "Increase in active users"
-}, {
   metric: "15x",
-  label: "ROI",
-  description: "Average client return"
+  label: "Traffic Growth",
+  description: "Increase in monthly visitors"
+}, {
+  metric: "50%",
+  label: "Faster Load Times",
+  description: "Through Webflow migration"
+}, {
+  metric: "40%",
+  label: "Higher Engagement",
+  description: "Across digital platforms"
 }];
 
 const caseStudies = [{
-  title: "NIB Health App",
-  description: "Complete digital transformation of Australia's fourth-largest health fund",
-  metrics: ["500k+ Active Users", "4.8 App Store Rating", "32% Cost Reduction"],
+  title: "Brand Transformation Journey",
+  description: "Repositioning Bilue as the trusted captain in mobile development",
+  metrics: ["4,500+ Monthly Visitors", "First-page Rankings", "Enterprise Client Growth"],
   image: "/lovable-uploads/548f4370-34a9-4609-a05f-64a3734d5f40.png"
 }];
 
@@ -68,12 +68,12 @@ const BilueProject = () => {
               <div className="p-8">
                 <div className="flex items-start justify-between flex-wrap gap-4 mb-6">
                   <h1 className="font-display text-4xl md:text-5xl font-bold text-white">
-                    Bilue Digital
+                    Bilue Digital Transformation
                   </h1>
                 </div>
 
                 <p className="text-xl text-luxury-100 mb-6">
-                  Premier digital transformation partner specializing in enterprise solutions and innovative mobile experiences.
+                  A comprehensive brand transformation and growth strategy project, repositioning Bilue as a market leader in mobile development and digital innovation.
                 </p>
 
                 {/* Skills Rating */}
@@ -198,7 +198,7 @@ const BilueProject = () => {
                 Ready to Transform?
               </h3>
               <p className="text-luxury-100 mb-6">
-                Join leading enterprises who trust Bilue for their digital transformation journey.
+                Join leading enterprises who trust us for their digital transformation journey.
               </p>
               <button className="w-full bg-gold-500 hover:bg-gold-600 text-luxury-950 font-semibold py-3 px-6 rounded-lg transition-colors">
                 Contact Brandon
