@@ -16,7 +16,8 @@ const projects = [
     name: "Sculpted",
     description: "Wellness & Fitness Platform",
     image: "/lovable-uploads/75591996-686b-4c22-bcb7-67ab0850c840.png",
-    category: "Health Tech"
+    category: "Health Tech",
+    link: "/projects/sculpted"
   },
   {
     id: 3,
