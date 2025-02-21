@@ -8,7 +8,7 @@ const projects = [
     id: 1,
     name: "Bilue",
     description: "Digital Innovation Partner",
-    image: "/bilue-logo.svg",
+    image: "/lovable-uploads/3bd5973b-b89c-45ec-b521-e68d040d5db0.png",
     category: "Digital Transformation"
   },
   {
