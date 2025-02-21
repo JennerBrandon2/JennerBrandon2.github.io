@@ -47,11 +47,11 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in [animation-delay:600ms]">
-            <button className="bg-gold-500 hover:bg-gold-400 text-black px-8 py-3 rounded-full font-medium inline-flex items-center transition-all">
+            <button className="bg-gold-200 hover:bg-gold-100 text-luxury-950 px-8 py-3 rounded-full font-medium inline-flex items-center transition-all">
               View Projects
               <ChevronRight className="w-4 h-4 ml-2" />
             </button>
-            <button className="border border-gold-700/50 hover:border-gold-600 px-8 py-3 rounded-full font-medium inline-flex items-center transition-all">
+            <button className="border border-gold-200/30 hover:border-gold-200/50 px-8 py-3 rounded-full font-medium inline-flex items-center transition-all hover:bg-gold-200/10">
               About Me
             </button>
           </div>
