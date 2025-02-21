@@ -22,7 +22,7 @@ const projects = [
     id: 3,
     name: "Wedded Wonderland",
     description: "Wedding Planning Platform",
-    image: "/wedded-wonderland-logo.png",
+    image: "/lovable-uploads/9d0e04fb-5687-4d69-9697-d09de3f7be77.png",
     category: "Marketplace"
   },
   {
