@@ -29,7 +29,7 @@ const projects = [
     id: 4,
     name: "Campaign Monitor",
     description: "Email Marketing Platform",
-    image: "/campaign-monitor-logo.svg",
+    image: "/lovable-uploads/dab4bcfc-a9c3-40e9-bbcc-a24f9c428a55.png",
     category: "MarTech"
   },
   {
