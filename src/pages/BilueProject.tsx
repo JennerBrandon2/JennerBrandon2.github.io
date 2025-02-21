@@ -1,175 +1,209 @@
 
 import { motion } from "framer-motion";
-import { ChevronLeft, Anchor, Waves, Globe, BarChart } from "lucide-react";
+import { ChevronLeft, Star, Trophy, Target, Check, BarChart3, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const achievements = [
+const projectStats = {
+  rating: 4.9,
+  reviews: 12,
+  highlights: [
+    "Award-winning Design",
+    "Enterprise Solutions",
+    "Mobile Excellence",
+    "Digital Transformation"
+  ]
+};
+
+const outcomes = [
   {
-    title: "Brand Refresh & Storytelling",
-    description: "Crafted a cohesive nautical-themed brand identity with compelling narrative and guidelines.",
-    icon: Anchor,
-    metrics: ["Unified Brand Identity", "Clear Brand Guidelines", "Consistent Messaging"]
+    metric: "4,500+",
+    label: "Monthly Visitors",
+    description: "Consistent organic traffic growth"
   },
   {
-    title: "Website Redesign",
-    description: "Migrated from WordPress to modern Webflow platform for enhanced performance.",
-    icon: Globe,
-    metrics: ["Faster Load Times", "Improved UX", "Modern Design"]
+    metric: "24.6%",
+    label: "User Engagement",
+    description: "Increase in active users"
   },
   {
-    title: "SEO & Organic Growth",
-    description: "Implemented comprehensive SEO strategy with remarkable results.",
-    icon: BarChart,
-    metrics: ["4,500+ Monthly Visitors", "1st Page Rankings", "15x Traffic Growth"]
+    metric: "15x",
+    label: "Traffic Growth",
+    description: "Year over year improvement"
   },
   {
-    title: "Enterprise Case Studies",
-    description: "Created detailed case studies showcasing successful enterprise deliveries.",
-    icon: Waves,
-    metrics: ["Expanded Portfolio", "Enterprise Wins", "Proven Track Record"]
+    metric: "1st",
+    label: "Page Rankings",
+    description: "For key industry terms"
+  }
+];
+
+const projectDetails = [
+  {
+    title: "Brand Strategy",
+    icon: Trophy,
+    items: [
+      "Cohesive nautical theme",
+      "Clear brand guidelines",
+      "Compelling narrative"
+    ]
+  },
+  {
+    title: "Technical Delivery",
+    icon: Target,
+    items: [
+      "WordPress to Webflow migration",
+      "Performance optimization",
+      "Mobile-first approach"
+    ]
+  },
+  {
+    title: "Business Impact",
+    icon: BarChart3,
+    items: [
+      "Increased lead generation",
+      "Higher conversion rates",
+      "Improved brand perception"
+    ]
   }
 ];
 
 const BilueProject = () => {
   return (
-    <div className="min-h-screen bg-luxury-950 text-white relative">
-      {/* Animated background with glass effect */}
-      <div className="fixed inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-luxury-950/90 via-luxury-900/80 to-gold-900/70 backdrop-blur-xl"></div>
+    <div className="min-h-screen bg-luxury-950 text-white">
+      {/* Hero Section with Gradient Overlay */}
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-luxury-950/90 via-luxury-900/80 to-gold-900/70 backdrop-blur-lg"></div>
         
-        {/* Animated glass bubbles */}
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-white/5 backdrop-blur-md"
-            style={{
-              width: Math.random() * 100 + 50,
-              height: Math.random() * 100 + 50,
-            }}
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            animate={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            transition={{
-              duration: Math.random() * 20 + 10,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "linear"
-            }}
-          />
-        ))}
-      </div>
+        <div className="relative container mx-auto px-4 py-12">
+          <Link to="/projects" className="inline-flex items-center text-gold-200 hover:text-gold-100 mb-8 transition-colors">
+            <ChevronLeft className="w-4 h-4 mr-2" />
+            Back to Projects
+          </Link>
 
-      {/* Content */}
-      <div className="relative z-10">
-        {/* Hero Section */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-gold-900/90 to-luxury-950/90 backdrop-blur-sm"></div>
-          
-          <div className="relative container mx-auto px-4 py-16">
-            <Link to="/projects" className="inline-flex items-center text-gold-200 hover:text-gold-100 mb-8 transition-colors">
-              <ChevronLeft className="w-4 h-4 mr-2" />
-              Back to Projects
-            </Link>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-4xl"
-            >
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl space-y-6"
+          >
+            <div className="flex items-start justify-between flex-wrap gap-4">
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold">
                 Bilue Digital Transformation
               </h1>
-              <p className="text-xl text-luxury-100 max-w-2xl">
-                Leading a comprehensive brand transformation and growth strategy, repositioning Bilue as a market leader in mobile development.
-              </p>
+              
+              <div className="flex items-center space-x-4 bg-white/5 backdrop-blur-sm p-4 rounded-lg">
+                <div className="text-center">
+                  <div className="text-3xl font-display font-bold text-gold-200">{projectStats.rating}</div>
+                  <div className="text-sm text-luxury-100">Rating</div>
+                </div>
+                <div className="flex items-center space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-5 h-5 ${i < Math.floor(projectStats.rating) ? 'text-gold-500' : 'text-luxury-700'}`}
+                      fill={i < Math.floor(projectStats.rating) ? 'currentColor' : 'none'}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <p className="text-xl text-luxury-100 max-w-2xl">
+              Transforming Bilue's digital presence through strategic brand development and technical excellence.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          {outcomes.map((outcome, index) => (
+            <motion.div
+              key={outcome.metric}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
+            >
+              <div className="text-3xl font-display font-bold text-gold-200 mb-2">
+                {outcome.metric}
+              </div>
+              <div className="text-lg font-semibold mb-2">{outcome.label}</div>
+              <div className="text-luxury-100">{outcome.description}</div>
             </motion.div>
-          </div>
+          ))}
         </div>
 
-        {/* Achievement Cards */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={achievement.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-xl backdrop-blur-md bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/10"
+        {/* Project Details */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="space-y-8"
+          >
+            {projectDetails.map((section, index) => (
+              <div
+                key={section.title}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
               >
-                <div className="p-8">
-                  <div className="flex items-start gap-6">
-                    <div className="p-3 rounded-lg bg-gold-900/20">
-                      <achievement.icon className="w-6 h-6 text-gold-200" />
-                    </div>
-                    <div className="flex-1 space-y-4">
-                      <h3 className="text-2xl font-display font-bold text-white group-hover:text-gold-200 transition-colors">
-                        {achievement.title}
-                      </h3>
-                      <p className="text-luxury-100">
-                        {achievement.description}
-                      </p>
-                      <div className="space-y-3">
-                        {achievement.metrics.map((metric, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-center gap-3"
-                          >
-                            <div className="w-2 h-2 rounded-full bg-gold-500" />
-                            <span className="text-luxury-100">{metric}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="p-3 rounded-lg bg-gold-900/20">
+                    <section.icon className="w-6 h-6 text-gold-200" />
                   </div>
+                  <h3 className="text-xl font-display font-bold">{section.title}</h3>
                 </div>
-              </motion.div>
+                <ul className="space-y-3">
+                  {section.items.map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-3">
+                      <Check className="w-5 h-5 text-gold-500" />
+                      <span className="text-luxury-100">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Case Study Preview */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-16 rounded-xl overflow-hidden backdrop-blur-md bg-white/5 border border-white/10"
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div className="p-8 lg:p-12 space-y-6">
-                <h2 className="font-display text-3xl font-bold text-white">
-                  NIB Health App Case Study
-                </h2>
-                <p className="text-luxury-100">
-                  Working closely with nib Group, Australia's fourth-largest health fund, Bilue built a suite of next-generation mobile apps that transformed cumbersome claims processes into fast, fun and contactless customer experiences.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gold-500" />
-                    <p className="text-luxury-100">One unified mobile platform</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gold-500" />
-                    <p className="text-luxury-100">24.6% increase in active users</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-gold-500" />
-                    <p className="text-luxury-100">World-first digital health card</p>
-                  </div>
+            <div className="p-6 border-b border-white/10">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 rounded-lg bg-gold-900/20">
+                  <Users className="w-6 h-6 text-gold-200" />
+                </div>
+                <h3 className="text-xl font-display font-bold">NIB Health App Case Study</h3>
+              </div>
+              <p className="text-luxury-100 mb-6">
+                Transforming customer experience through innovative mobile solutions for Australia's fourth-largest health fund.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-gold-500" />
+                  <span className="text-luxury-100">One unified mobile platform</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-gold-500" />
+                  <span className="text-luxury-100">24.6% increase in active users</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-gold-500" />
+                  <span className="text-luxury-100">World-first digital health card</span>
                 </div>
               </div>
-              <div className="bg-luxury-900/50 p-8 lg:p-12 flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/548f4370-34a9-4609-a05f-64a3734d5f40.png" 
-                  alt="NIB Health App Interface" 
-                  className="w-full max-w-md rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
-                />
-              </div>
+            </div>
+            <div className="p-6 bg-luxury-900/50">
+              <img 
+                src="/lovable-uploads/548f4370-34a9-4609-a05f-64a3734d5f40.png" 
+                alt="NIB Health App Interface" 
+                className="w-full rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
+              />
             </div>
           </motion.div>
         </div>
