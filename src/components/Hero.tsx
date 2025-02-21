@@ -4,23 +4,26 @@ import { ChevronRight } from "lucide-react";
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-luxury-950 text-white">
-      {/* Background layers for depth and movement */}
+      {/* Background pattern layer */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSIjOTk5IiBzdHJva2Utb3BhY2l0eT0iLjA1Ii8+PC9nPjwvc3ZnPg==')] opacity-50"></div>
+
+      {/* Gradient base layer */}
       <div className="absolute inset-0 bg-gradient-to-br from-gold-900/90 via-gold-800/80 to-black opacity-90"></div>
       
-      {/* Animated gradient overlay */}
+      {/* Multiple animated gradient overlays */}
       <div className="absolute inset-0 opacity-20 bg-gradient-to-r from-gold-200 via-gold-400 to-gold-200 bg-[length:200%_100%] animate-[gradient_8s_ease-in-out_infinite]"></div>
+      <div className="absolute inset-0 opacity-10 bg-gradient-to-t from-gold-300 via-transparent to-gold-300 bg-[length:100%_200%] animate-[gradient-y_12s_ease-in-out_infinite]"></div>
       
-      {/* Moving particles effect */}
+      {/* Enhanced floating particles */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -inset-[10px] opacity-50">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(30)].map((_, i) => (
             <div
               key={i}
               className="absolute rounded-full bg-gold-200/20 animate-float"
               style={{
-                width: Math.random() * 4 + 2 + 'px',
-                height: Math.random() * 4 + 2 + 'px',
+                width: Math.random() * 6 + 2 + 'px',
+                height: Math.random() * 6 + 2 + 'px',
                 top: Math.random() * 100 + '%',
                 left: Math.random() * 100 + '%',
                 animationDelay: Math.random() * 5 + 's',
@@ -29,6 +32,22 @@ export const Hero = () => {
             ></div>
           ))}
         </div>
+      </div>
+
+      {/* Animated light rays */}
+      <div className="absolute inset-0 overflow-hidden opacity-30">
+        {[...Array(3)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-[150%] h-[100px] bg-gradient-to-r from-transparent via-gold-200/20 to-transparent rotate-[30deg] animate-ray"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: '-50%',
+              animationDelay: `${i * 3}s`,
+              transform: `rotate(${30 + i * 15}deg)`
+            }}
+          ></div>
+        ))}
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
