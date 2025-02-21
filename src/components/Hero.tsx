@@ -1,5 +1,5 @@
 
-import { ChevronRight, RocketLaunch } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -8,7 +8,7 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center bg-gold-900/30 backdrop-blur-sm px-4 py-2 rounded-full text-gold-200 animate-fade-in">
-            <RocketLaunch className="w-4 h-4 mr-2" />
+            <ChevronRight className="w-4 h-4 mr-2" />
             <span className="text-sm">Strategic Growth & RevOps Leader</span>
           </div>
           
