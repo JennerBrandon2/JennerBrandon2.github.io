@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -21,17 +22,18 @@ const projects = [
   },
   {
     id: 3,
+    name: "Campaign Monitor",
+    description: "Email Marketing Platform",
+    image: "/lovable-uploads/dab4bcfc-a9c3-40e9-bbcc-a24f9c428a55.png",
+    category: "MarTech",
+    link: "/projects/campaign-monitor"
+  },
+  {
+    id: 4,
     name: "Wedded Wonderland",
     description: "Wedding Planning Platform",
     image: "/lovable-uploads/9d0e04fb-5687-4d69-9697-d09de3f7be77.png",
     category: "Marketplace"
-  },
-  {
-    id: 4,
-    name: "Campaign Monitor",
-    description: "Email Marketing Platform",
-    image: "/lovable-uploads/dab4bcfc-a9c3-40e9-bbcc-a24f9c428a55.png",
-    category: "MarTech"
   },
   {
     id: 5,

@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import BilueProject from "./pages/BilueProject";
 import SculptedProject from "./pages/SculptedProject";
+import CampaignMonitorProject from "./pages/CampaignMonitorProject";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/bilue" element={<BilueProject />} />
           <Route path="/projects/sculpted" element={<SculptedProject />} />
+          <Route path="/projects/campaign-monitor" element={<CampaignMonitorProject />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
