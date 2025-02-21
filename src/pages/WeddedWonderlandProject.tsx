@@ -1,14 +1,9 @@
 
 import { motion } from "framer-motion";
-import { ChevronLeft, Lock, Star, Trophy, Heart, Ring } from "lucide-react";
+import { ChevronLeft, Lock, Star, Trophy, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const achievements = [
-  {
-    icon: Ring,
-    title: "Wedded Concierge & Network",
-    description: "Led development of exclusive concierge services and professional network platforms"
-  },
   {
     icon: Heart,
     title: "Media & Content",
