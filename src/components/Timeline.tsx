@@ -1,5 +1,5 @@
 
-import { Briefcase, ArrowUpRight } from "lucide-react";
+import { Briefcase, ArrowUpRight, ChevronRight } from "lucide-react";
 
 const timelineData = [
   {
@@ -33,7 +33,7 @@ const timelineData = [
   {
     period: "2019 - 2021",
     role: "Data & Cloud Sales & Recruitment Consultant",
-    company: "Multiple Organizations",
+    company: "NTT, Telstra, Fractal",
     description: "Built out cloud, data, DevOps & IT managed service division from scratch. Developed market strategies, secured key clients & trained junior consultants. Specialized in Data, Cloud & DevOps solutions across Australia, partnering with startups, consultancies & major enterprises.",
     isWonderGroup: false
   },
@@ -55,13 +55,19 @@ export const Timeline = () => {
           
           <div className="space-y-12">
             {timelineData.map((item, index) => (
-              <div key={index} className="relative group">
+              <div key={index} className={`relative group ${item.isWonderGroup ? 'ml-6' : ''}`}>
                 <div className={`absolute left-0 top-0 w-px h-full 
                   ${item.isWonderGroup 
                     ? 'bg-gradient-to-b from-gold-500 to-gold-700 shadow-lg shadow-gold-500/20' 
                     : 'bg-luxury-800'} 
                   group-last:h-24`}
                 ></div>
+                
+                {item.isWonderGroup && (
+                  <div className="absolute -left-6 top-1/2 -translate-y-1/2">
+                    <ChevronRight className="w-4 h-4 text-gold-500" />
+                  </div>
+                )}
                 
                 <div className="relative pl-8 transition-all">
                   <div className={`absolute left-0 top-2 -translate-x-1/2 w-4 h-4 rounded-full border-2 
@@ -70,16 +76,18 @@ export const Timeline = () => {
                       : 'border-gold-500 bg-luxury-950'}`}>
                   </div>
                   
-                  <div className={`${item.isWonderGroup ? 'bg-gold-900/20 border border-gold-500/20' : 'bg-luxury-900/50'} 
+                  <div className={`${item.isWonderGroup 
+                    ? 'bg-gold-900/20 border border-gold-500/20 relative after:absolute after:inset-0 after:bg-gradient-to-r after:from-gold-500/5 after:to-transparent after:opacity-50' 
+                    : 'bg-luxury-900/50'} 
                     backdrop-blur-sm p-6 rounded-lg 
                     ${item.isWonderGroup ? 'hover:bg-gold-900/30' : 'hover:bg-luxury-800/50'} 
-                    transition-all`}>
+                    transition-all overflow-hidden`}>
                     <div className="text-gold-500 text-sm font-medium mb-2">{item.period}</div>
-                    <h3 className="text-xl font-display text-white mb-1">{item.role}</h3>
-                    <div className="text-luxury-300 text-sm mb-4">{item.company}</div>
-                    <p className="text-luxury-100">{item.description}</p>
+                    <h3 className="text-xl font-display text-white mb-1 relative z-10">{item.role}</h3>
+                    <div className="text-luxury-300 text-sm mb-4 relative z-10">{item.company}</div>
+                    <p className="text-luxury-100 relative z-10">{item.description}</p>
                     
-                    <button className="mt-4 text-gold-400 hover:text-gold-300 inline-flex items-center text-sm font-medium transition-colors">
+                    <button className="mt-4 text-gold-400 hover:text-gold-300 inline-flex items-center text-sm font-medium transition-colors relative z-10">
                       Learn more <ArrowUpRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
