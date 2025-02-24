@@ -3,22 +3,22 @@ import { Briefcase, ArrowUpRight } from "lucide-react";
 
 const timelineData = [
   {
-    period: "2023 - Present",
-    role: "Group Sales & Marketing Manager",
+    period: "2024 - Present",
+    role: "Strategy & Operations Manager",
     company: "Wonder Group",
-    description: "Leading sales and marketing strategies across Wonder Group's portfolio, driving revenue growth and brand expansion.",
+    description: "Leading strategic initiatives and operational excellence across Wonder Group's portfolio of companies.",
   },
   {
-    period: "2019 - 2023",
-    role: "Data & Cloud Consultant",
-    company: "NTT, Telstra, Fractal",
-    description: "Managed large-scale cloud and data projects, collaborating with industry giants across Australia.",
+    period: "2023 - 2024",
+    role: "Product & Growth Manager",
+    company: "Wedded Wonderland (Wonder Group)",
+    description: "Drove product development and growth strategies for Wedded Wonderland, a key Wonder Group subsidiary in the wedding industry space.",
   },
   {
-    period: "2017 - 2019",
-    role: "Founder & CEO",
-    company: "Digital Marketing Agency",
-    description: "Founded and led a successful digital marketing agency, pioneering AR-driven campaigns with 40M+ organic impressions.",
+    period: "2022 - 2022",
+    role: "Head of Talent",
+    company: "St Trinity (Wonder Group)",
+    description: "Led talent acquisition and development strategies at St Trinity, establishing strong foundations for Wonder Group's talent initiatives.",
   },
 ];
 
