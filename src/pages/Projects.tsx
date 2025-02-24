@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -54,15 +55,15 @@ const projects = [
 const Projects = () => {
   return (
     <div className="min-h-screen bg-luxury-950 text-white relative">
-      {/* Glassy background with movement */}
+      {/* Enhanced glassy background with parallax effect */}
       <div className="fixed inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-luxury-950/90 via-luxury-900/80 to-gold-900/70 backdrop-blur-xl"></div>
+        <div className="absolute inset-0 luxury-gradient opacity-90"></div>
         
-        {/* Animated glass bubbles */}
-        {[...Array(20)].map((_, i) => (
+        {/* Animated glass bubbles with improved performance */}
+        {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full bg-white/5 backdrop-blur-md"
+            className="absolute rounded-full glass-effect"
             style={{
               width: Math.random() * 100 + 50,
               height: Math.random() * 100 + 50,
@@ -87,25 +88,31 @@ const Projects = () => {
 
       {/* Content */}
       <div className="relative z-10">
-        {/* Header with gradient */}
+        {/* Enhanced header with gradient */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-gold-900/90 to-luxury-950/90 backdrop-blur-sm"></div>
           
           <div className="relative container mx-auto px-4 py-16">
-            <Link to="/" className="inline-flex items-center text-gold-200 hover:text-gold-100 mb-8 transition-colors">
-              <ChevronLeft className="w-4 h-4 mr-2" />
+            <Link to="/" className="inline-flex items-center text-gold-200 hover:text-gold-100 mb-8 transition-colors group">
+              <ChevronLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
               Back to Home
             </Link>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Featured Projects
-            </h1>
-            <p className="text-luxury-100 max-w-2xl text-lg">
-              Explore our portfolio of successful partnerships and transformative solutions across various industries.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gradient">
+                Featured Projects
+              </h1>
+              <p className="text-luxury-100 max-w-2xl text-lg">
+                Explore our portfolio of successful partnerships and transformative solutions across various industries.
+              </p>
+            </motion.div>
           </div>
         </div>
 
-        {/* Project Grid */}
+        {/* Enhanced project grid with improved hover effects */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
@@ -114,25 +121,25 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-xl backdrop-blur-md bg-white/10 hover:bg-white/20 transition-colors"
+                className="group relative overflow-hidden rounded-xl glass-effect hover-lift"
               >
                 <Link to={project.link || "#"} className="block">
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
-                    <div className="space-y-2">
-                      <span className="text-gold-200 text-sm font-medium">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/60 to-transparent">
+                    <div className="space-y-2 transform transition-transform duration-300 group-hover:translate-y-[-4px]">
+                      <span className="inline-block px-3 py-1 text-sm font-medium text-gold-200 bg-luxury-900/80 rounded-full">
                         {project.category}
                       </span>
-                      <h3 className="text-2xl font-display font-bold text-white">
+                      <h3 className="text-2xl font-display font-bold text-white group-hover:text-gold-200 transition-colors">
                         {project.name}
                       </h3>
-                      <p className="text-luxury-100">
+                      <p className="text-luxury-100 group-hover:text-white transition-colors">
                         {project.description}
                       </p>
                     </div>

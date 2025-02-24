@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,6 +83,10 @@ export default {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(200%)' },
         },
+        shimmer: {
+          '0%': { backgroundPosition: '200% 0' },
+          '100%': { backgroundPosition: '-200% 0' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -93,6 +96,7 @@ export default {
         'gradient': 'gradient 8s ease-in-out infinite',
         'gradient-y': 'gradient-y 12s ease-in-out infinite',
         'ray': 'ray 8s linear infinite',
+        'shimmer': 'shimmer 8s linear infinite',
       },
     },
   },
