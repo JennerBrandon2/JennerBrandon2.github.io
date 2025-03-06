@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -48,6 +49,19 @@ export default {
           700: "#964d30",
           800: "#7a402d",
           900: "#643626",
+        },
+        blue: {
+          50: "#f2f7fc",
+          100: "#e6f7ff",
+          200: "#bae7ff",
+          300: "#91d5ff",
+          400: "#65c6ff",
+          500: "#1EAEDB",
+          600: "#0FA0CE",
+          700: "#0c87b8",
+          800: "#096b92",
+          900: "#115173",
+          950: "#1a2b3c",
         },
       },
       fontFamily: {

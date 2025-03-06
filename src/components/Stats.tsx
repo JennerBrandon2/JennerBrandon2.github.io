@@ -47,17 +47,17 @@ export const Stats = () => {
   }, [isVisible]);
 
   return (
-    <section id="stats-section" className="py-24 bg-luxury-900">
+    <section id="stats-section" className="py-24 bg-[#f2f7fc]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-display font-bold text-white mb-2">
+              <div className="text-4xl md:text-5xl font-display font-bold text-[#1EAEDB] mb-2">
                 {counts[index]}
                 {index === 2 && "M+"}
                 {index !== 2 && "+"}
               </div>
-              <div className="text-sm text-luxury-300">{stat.label}</div>
+              <div className="text-sm text-[#555555]">{stat.label}</div>
             </div>
           ))}
         </div>
