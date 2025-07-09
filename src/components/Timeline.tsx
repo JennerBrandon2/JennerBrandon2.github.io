@@ -3,7 +3,14 @@ import { Briefcase, ArrowUpRight, ChevronRight } from "lucide-react";
 
 const timelineData = [
   {
-    period: "2024 - Present",
+    period: "2025 - Present",
+    role: "Operations Manager - Buying",
+    company: "Lendi Group / Aussie Homes",
+    description: "Leading systems, strategy, and execution across the entire buyer journey from first enquiry to settlement. Focus on RevOps, CRM systems enablement, marketing attribution, and scaling buyer's agent services including Australia's largest buyer's agent franchise model.",
+    isWonderGroup: false
+  },
+  {
+    period: "2024 - 2025",
     role: "Strategy & Operations Manager",
     company: "Wonder Group",
     description: "Leading strategic initiatives and operational excellence across Wonder Group's portfolio of companies.",

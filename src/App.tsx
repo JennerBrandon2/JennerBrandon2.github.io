@@ -10,6 +10,7 @@ import BilueProject from "./pages/BilueProject";
 import SculptedProject from "./pages/SculptedProject";
 import CampaignMonitorProject from "./pages/CampaignMonitorProject";
 import WeddedWonderlandProject from "./pages/WeddedWonderlandProject";
+import LendiProject from "./pages/LendiProject";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/lendi" element={<LendiProject />} />
           <Route path="/projects/bilue" element={<BilueProject />} />
           <Route path="/projects/sculpted" element={<SculptedProject />} />
           <Route path="/projects/campaign-monitor" element={<CampaignMonitorProject />} />
@@ -35,4 +37,3 @@ const App = () => (
 );
 
 export default App;
-

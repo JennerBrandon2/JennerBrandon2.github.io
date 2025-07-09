@@ -6,6 +6,14 @@ import { Link } from "react-router-dom";
 const projects = [
   {
     id: 1,
+    name: "Lendi Group / Aussie Homes",
+    description: "Operations Manager - Buying",
+    image: "/lovable-uploads/3bd5973b-b89c-45ec-b521-e68d040d5db0.png",
+    category: "PropTech",
+    link: "/projects/lendi"
+  },
+  {
+    id: 2,
     name: "Bilue",
     description: "Digital Innovation Partner",
     image: "/lovable-uploads/bfbce4d2-a37c-421c-8e52-8ce770ad2171.png",
@@ -13,7 +21,7 @@ const projects = [
     link: "/projects/bilue"
   },
   {
-    id: 2,
+    id: 3,
     name: "Sculpted",
     description: "Wellness & Fitness Platform",
     image: "/lovable-uploads/75591996-686b-4c22-bcb7-67ab0850c840.png",
@@ -21,7 +29,7 @@ const projects = [
     link: "/projects/sculpted"
   },
   {
-    id: 3,
+    id: 4,
     name: "Campaign Monitor",
     description: "Email Marketing Platform",
     image: "/lovable-uploads/dab4bcfc-a9c3-40e9-bbcc-a24f9c428a55.png",
@@ -29,7 +37,7 @@ const projects = [
     link: "/projects/campaign-monitor"
   },
   {
-    id: 4,
+    id: 5,
     name: "Wedded Wonderland",
     description: "Wedding Planning Platform",
     image: "/lovable-uploads/9d0e04fb-5687-4d69-9697-d09de3f7be77.png",
@@ -37,14 +45,14 @@ const projects = [
     link: "/projects/wedded-wonderland"
   },
   {
-    id: 5,
+    id: 6,
     name: "St Trinity Property Group",
     description: "Real Estate Development",
     image: "/lovable-uploads/d5c87da5-02da-4b79-b047-164bf754233f.png",
     category: "Property"
   },
   {
-    id: 6,
+    id: 7,
     name: "Wonder Group",
     description: "Innovation Consultancy",
     image: "/wonder-group-logo.png",
